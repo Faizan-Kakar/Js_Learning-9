@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js-Learning-9</title>
+</head>
+
+<body>
+   
+    <h1 id="heading">Js-Learning-9</h1>
+    <h1 id="heading1">Js-Learning-999</h1>
+    <a href="//codewithharry.com"></a>
+    <link  href="//codewithharry.com">
+ 
+
+    <div class="container" id="container">
+        <div class="child" id="first">chiil1
+            <ul class="list" id="List">
+                <li class="subLists" id="subLists1">This is first child</li>
+                <li class="subLists" id="subLists2">fdsfsd</li>
+                <li class="subLists" id="subLists3"></li>
+                <li class="subLists" id="subLists4">This is fourth child</li>
+            </ul>
+        </div>
+        <div class="child" id="second">child2</div>
+        <div class="child" id="third">child3</div>
+        <div class="child" id="fourth">child4</div>
+        <form action="">hello</form>
+        <form action="">hi</form>
+        <form action="">bye</form>
+    </div>
+
+    <h1 id="Heading1" class="Heading1">Go to code with harry</h1>
+
+    <script>
+        /*
+        for (let i = 0; i < 1; i++) {
+            // console.log(i); 
+        }
+
+        //   For in loop
+
+        const obj = {
+            name: "faizan khan",
+            age: 19,
+            gender: "male"
+        }
+
+        for (let key in obj) {
+            // console.log(`The ${key} of object is ${obj[key]}`);
+        }
+
+        let a = window.document;
+
+        console.log(a);
+
+*/
+
+
+   console.log("Weocome to Faizn's channel");
+   let a = document;
+   a= document.all;
+   a =  document.links[1];
+
+    // console.log(a);
+
+ document.getElementById("heading").addEventListener("click", function(e){
+    var target = e.offsetY;
+    // console.log(target);
+ });
+
+//  Classes and inheritance
+
+ class Employee
+ {
+     name;
+     salary;
+     experience;
+
+     constructor(name , salary, experience)
+     {
+        this.name = name;
+        this.salary = salary;
+        this.experience = experience;
+     }
+    static addition(a,b)
+     {
+        return a+b;
+     }
+ }
+ 
+      faizan = new Employee("faizan", 12000, 45);
+    //   console.log(faizan);
+    //   console.log(faizan.name);
+      var add = Employee.addition(1,3);
+    //   console.log(add);
+
+    // Html elements selectors
+
+    
+    var selector = document.getElementById("second");
+    selector = selector.innerText = "hi"
+    // console.log(document.getElementById("first").innerHTML)
+
+     
+    //   single element selector
+
+    let selector2 = document.querySelector("h1");
+     
+    selector2 = selector2.style.color = "green";
+
+     // Multiple elements selector
+
+     let selector1 = document.getElementsByClassName("container");
+    //  selector1 = selector1.getElementById("first");
+    //  console.log(selector1);
+
+    let cont = document.querySelector(".container");
+    
+   
+    // console.log(cont.children[2]);
+
+    let elem = document.getElementById('container');
+    // console.log(elem.children[0].children[0].children);
+    // console.log(elem.childElementCount);
+
+    // Adding Elements to the DOM
+
+    let element = document.createElement("li");
+    element.className = "subLists";
+    element.id = "subLists5";
+    element.title = 'list';
+    let text =document.createTextNode( "This is the ceated list");
+    element.appendChild(text);
+    // element.innerText = "this is the created list";
+
+    let ul = document.getElementById('List');
+    ul.appendChild(element);
+    // console.log(document.getElementById('container').children[0].children[0].children[4]);
+
+    let element2 = document.createElement('h1');
+    element.className = 'subList';
+    element.id = 'subList5';
+    element.setAttribute('title', 'myTitle');
+    let text2 = document.createTextNode('This is replaced heading');
+    element2.appendChild(text2);
+
+    element.replaceWith(element2);
+
+    let ul1 = document.getElementById("List");
+    ul1.replaceChild(document.getElementById('subLists4'),document.getElementById('subLists1'));
+
+    ul1.removeChild(document.getElementById('subLists2'))
+
+    let h = document.getElementById('Heading1');
+    h.setAttribute('href', ('https://www.codewithharry.com'))
+    console.log(h);
+   
+    </script>
+</body>
+
+</html>
